@@ -1,4 +1,4 @@
-config = []
+config = {}
 
 config['update_interval_in_seconds'] = 60
 config['username'] = 'your@email.com'
