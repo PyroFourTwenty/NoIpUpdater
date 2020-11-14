@@ -20,8 +20,6 @@ print('Writing to service file')
 os.system('echo "{}" >> /etc/systemd/system/noipupdater.service'.format(service_text))
 print('Enabling service')
 os.system('systemctl enable noipupdater.service')
-print('Starting service')
-os.system('systemctl start noipupdater.service')
 print('done')
 print('created and started service')
 
