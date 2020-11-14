@@ -8,7 +8,7 @@ After=network.target
 [Service]
 User=pi
 WorkingDirectory={}
-ExecStart=python SimpleUpdater.py
+ExecStart=python3 src/SimpleUpdater.py
 Restart=always
 
 [Install]
