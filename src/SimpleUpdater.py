@@ -1,5 +1,11 @@
 import requests
-from src.config import config
+
+try:
+    from config import config
+except ImportError:
+    print('import error')
+    from src.config import config
+
 import time
 
 current_ip = ''
