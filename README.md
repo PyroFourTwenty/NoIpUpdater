@@ -1,13 +1,22 @@
 # Welcome to NoIpUpdater
 
- I got a few Raspberry Pi's running services i want to portforward to access them from outside my home network. For this i use the free dynamic DNS service from [noip.com](noip.com).  This worked fine for me from the beginning but as some time passed my router got assigned a new public IP from my ISP, which rendered the usage of my DDNS useless. I frequently had to contact someone at home to tell me the freshly assigned IP so i could change it in the WebUI of noip.com .  Of course this is a tiresome process, especially if the router gets a new IP every single day. At some point i found out about the Update API of noip.com and decided to write a little service to periodically tell noip.com that my router's IP has been changed. 
+ I got a few Raspberry Pi's running services i want to portforward to access them from outside my home network. 
+ For this i use the free dynamic DNS service of [noip.com](https://www.noip.com).  This worked fine for me from the 
+ beginning but as some time passed my router got assigned a new public IP from my ISP, which rendered the usage of my 
+ DDNS useless. I frequently had to contact someone at home to tell me the freshly assigned IP so i could change it in 
+ the WebUI of noip.com .  Of course this is a tiresome process, especially if the router gets a new IP every single day.
+ At some point i found out about the Update API of noip.com and decided to write a little service to periodically tell 
+ noip.com that my router's IP has been changed. 
+ 
  This is supposed to run on a Raspberry Pi, but other devices that are capable of running Python should be able to use it, too.    
 
 # Files in this repo
 
 ## SimpleUpdater.py
 
-This script uses an external API (api.ipify.org) to determine the public IP and compare it to the last locally saved IP (initially the IP is empty). If the public IP has been changed, an update will be sent to noip.com (only regarding your configured hostname).
+This script uses an external API (api.ipify.org) to determine the public IP and compare it to the last locally saved IP 
+(initially the IP is empty). If the public IP has been changed, an update will be sent to noip.com (only regarding your 
+configured hostname).
 
 ## config.py
 
