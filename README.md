@@ -1,3 +1,4 @@
+
 # Welcome to NoIpUpdater
 
  I got a few Raspberry Pi's running services i want to portforward to access them from outside my home network. 
@@ -9,6 +10,19 @@
  noip.com that my router's IP has been changed. 
  
  This is supposed to run on a Raspberry Pi, but other devices that are capable of running Python should be able to use it, too.    
+# Installation
+clone this repository using
+
+    git clone https://github.com/PyroFourTwenty/NoIpUpdater.git
+execute service creator
+
+    sudo python3 NoIpUpdater/src/setup_systemd_service.py
+reboot using 
+
+    sudo reboot
+ or start service manually using
+
+    sudo systemctl start noipupdater.service
 
 # Files in this repo
 
