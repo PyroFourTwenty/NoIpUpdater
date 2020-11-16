@@ -40,7 +40,7 @@ Possibly there are better ways to save a configuration file, but i wanted to kee
 The config file contains the following fields:
 |                |default                         | comment |
 |----------------|---|-|
-|update_interval_in_seconds|60 | Your hostname will be unreachable for this amout of seconds at most, so keep this number small, to not overflood your network with useless requests. Normally the hostname does not change this frequently|            |
+|update_interval_in_seconds|60 | Your hostname will be unreachable for this amout of seconds at most, so keep this number small but not too small, to not overflood your network with useless requests. Normally the hostname does not change this frequently|            |
 |username|your@email.com            | Enter your noip.com-username here
 |password|y0urPässw0r7| Enter your noip.com-password here
 |hostname|example.ddns.net| This will be your noip.com-hostname, which will be updated
