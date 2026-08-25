@@ -18,9 +18,10 @@ def update_no_ip():
         new_ip = requests.get('http://api.ipify.org').text
         if new_ip != current_ip:
             current_ip = new_ip
-            update = requests.get(
-                config['update_url'].format(config['username'], config['password'], config['hostname'], current_ip))
-            print(update.status_code)
+            for hostname in config['hostnames']:
+                update = requests.get(
+                    config['update_url'].format(config['username'], config['password'], hostname, current_ip))
+                print(update.status_code)
         else:
             print('IP didnt change, no update necessary')
     except Exception as e:
